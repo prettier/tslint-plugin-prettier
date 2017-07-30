@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["es6"],
+    "module": "commonjs",
+    "declaration": true,
+    "importHelpers": true
+  },
+  "include": ["src/**/*.ts", "gulpfile.ts"]
+}

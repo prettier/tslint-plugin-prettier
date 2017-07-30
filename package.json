@@ -1,0 +1,60 @@
+{
+  "name": "tslint-plugin-prettier",
+  "version": "1.0.0",
+  "description": "tslint plugin for prettier formatting",
+  "keywords": [
+    "prettier",
+    "tslint",
+    "tslint-plugin",
+    "tslint-rules"
+  ],
+  "main": "rules/index.js",
+  "types": "rules/index.d.ts",
+  "repository": "https://github.com/ikatyang/tslint-plugin-prettier",
+  "homepage": "https://github.com/ikatyang/tslint-plugin-prettier#readme",
+  "author": {
+    "name": "Ika",
+    "email": "ikatyang@gmail.com",
+    "url": "https://github.com/ikatyang"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "yarn run build -- --inlineSourceMap false",
+    "lint": "tslint -p ./tsconfig.json --type-check",
+    "test": "tslint --test ./tests/*/*",
+    "test-coverage": "nyc yarn run test",
+    "build": "rm -rf ./rules && tsc -p tsconfig.build.json",
+    "format": "gulp format",
+    "format-check": "gulp format-check",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "fast-diff": "^1.1.1",
+    "tslib": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/fast-diff": "1.1.0",
+    "@types/gulp": "3.8.33",
+    "@types/prettier": "1.5.0",
+    "gulp": "3.9.1",
+    "gulp-plugin-prettier": "1.0.0",
+    "nyc": "11.1.0",
+    "prettier": "1.5.3",
+    "standard-version": "4.2.0",
+    "ts-node": "3.3.0",
+    "tslint": "5.5.0",
+    "tslint-config-ikatyang": "1.0.2",
+    "typescript": "2.4.2"
+  },
+  "peerDependencies": {
+    "prettier": "^1.4.0",
+    "tslint": "^5.0.0",
+    "typescript": "^2.0.0"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "files": [
+    "/rules/**/*"
+  ]
+}

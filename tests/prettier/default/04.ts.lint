@@ -1,0 +1,2 @@
+var foo= "";
+       ~ [Insert `·`]

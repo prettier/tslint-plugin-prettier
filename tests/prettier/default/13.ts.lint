@@ -1,0 +1,2 @@
+var foo ='';var bar ='';var baz ='';
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Replace `'';var·bar·='';var·baz·=''` with `·"";⏎var·bar·=·"";⏎var·baz·=·""`]

@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+- 4
+- 6
+- stable
+
+before_install:
+- yarn global add codecov
+
+script:
+- yarn run lint
+- yarn run format-check
+- yarn run build
+- yarn run test-coverage
+
+after_script:
+- codecov
+
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+matrix:
+  fast_finish: true
