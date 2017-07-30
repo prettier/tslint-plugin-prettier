@@ -2418,9 +2418,9 @@ tslib@^1.0.0, tslib@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.7.1.tgz#bc8004164691923a79fe8378bbeb3da2017538ec"
 
-tslint-config-ikatyang@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/tslint-config-ikatyang/-/tslint-config-ikatyang-2.0.0.tgz#aad35436e798c70f744c808ef09a598e9767e20f"
+tslint-config-ikatyang@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tslint-config-ikatyang/-/tslint-config-ikatyang-2.0.1.tgz#ce7374ca07169daf90ae8ab4b2ec6d67a4d70db3"
   dependencies:
     prettier "^1.5.3"
     prettier-config-ikatyang "^1.0.0"
