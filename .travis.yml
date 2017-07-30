@@ -10,7 +10,6 @@ before_install:
 
 script:
 - yarn run lint
-- yarn run format-check
 - yarn run build
 - yarn run test-coverage
 

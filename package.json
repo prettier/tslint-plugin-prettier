@@ -24,8 +24,6 @@
     "test": "tslint --test ./tests/*/*",
     "test-coverage": "nyc yarn run test",
     "build": "rm -rf ./rules && tsc -p tsconfig.build.json",
-    "format": "gulp format",
-    "format-check": "gulp format-check",
     "release": "standard-version"
   },
   "dependencies": {
@@ -34,16 +32,13 @@
   },
   "devDependencies": {
     "@types/fast-diff": "1.1.0",
-    "@types/gulp": "3.8.33",
+    "@types/node": "8.0.17",
     "@types/prettier": "1.5.0",
-    "gulp": "3.9.1",
-    "gulp-plugin-prettier": "1.0.0",
     "nyc": "11.1.0",
     "prettier": "1.5.3",
     "standard-version": "4.2.0",
-    "ts-node": "3.3.0",
     "tslint": "5.5.0",
-    "tslint-config-ikatyang": "1.0.2",
+    "tslint-config-ikatyang": "2.0.1",
     "typescript": "2.4.2"
   },
   "peerDependencies": {
