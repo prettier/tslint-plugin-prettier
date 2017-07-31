@@ -1,5 +1,12 @@
 {
-  "extends": "tslint-config-ikatyang",
+  "rulesDirectory": [
+    "./rules"
+  ],
+  "extends": [
+    "tslint-config-ikatyang",
+    "tslint-config-prettier-ext",
+    "prettier-config-ikatyang/tslint"
+  ],
   "rules": {
     "filename-convention": [true, { "allowPatterns": ["Rule$"] }]
   }
