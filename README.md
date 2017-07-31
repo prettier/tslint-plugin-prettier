@@ -88,9 +88,6 @@ Same as [Prettier Options](https://github.com/prettier/prettier#options), for ex
 # lint
 yarn run lint
 
-# format
-yarn run format
-
 # build
 yarn run build
 
