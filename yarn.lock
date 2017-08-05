@@ -1568,8 +1568,8 @@ split2@^2.0.0:
     through2 "^2.0.2"
 
 split@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/split/-/split-1.0.0.tgz#c4395ce683abcd254bc28fe1dabb6e5c27dcffae"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/split/-/split-1.0.1.tgz#605bd9be303aa59fb35f9229fbea0ddec9ea07d9"
   dependencies:
     through "2"
 
@@ -1701,9 +1701,9 @@ tslint-config-ikatyang@2.1.0:
     tslint-eslint-rules "~4.1.0"
     tslint-plugin-ikatyang "~1.0.0"
 
-tslint-config-prettier-ext@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/tslint-config-prettier-ext/-/tslint-config-prettier-ext-1.3.0.tgz#501437366b90be5a05478123ac78965e5a38287a"
+tslint-config-prettier-ext@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/tslint-config-prettier-ext/-/tslint-config-prettier-ext-1.4.0.tgz#b83d96cb856e385032f083b5fdb7ceb873d4922e"
 
 tslint-consistent-codestyle@~1.6.0:
   version "1.6.0"
