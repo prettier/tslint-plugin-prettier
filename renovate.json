@@ -2,6 +2,7 @@
   "automerge": "minor",
   "depTypes": [{ "depType": "dependencies", "pinVersions": false }],
   "pinVersions": true,
+  "prCreation": "not-pending",
   "rebaseStalePrs": true,
   "semanticCommits": true
 }
