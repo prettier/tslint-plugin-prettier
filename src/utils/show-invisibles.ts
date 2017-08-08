@@ -2,6 +2,7 @@
 
 export function show_invisibles(str: string) {
   let ret = '';
+  // tslint:disable-next-line:prefer-for-of
   for (let i = 0; i < str.length; i++) {
     switch (str[i]) {
       case ' ':
