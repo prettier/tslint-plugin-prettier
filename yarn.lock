@@ -10,9 +10,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@types/fast-diff/-/fast-diff-1.1.0.tgz#68c7f476025740b0b6756e51e38b1188dd528b0e"
 
-"@types/node@8.0.19":
-  version "8.0.19"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.19.tgz#e46e2b0243de7d03f15b26b45c59ebb84f657a4e"
+"@types/node@8.0.20":
+  version "8.0.20"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.20.tgz#65c7375255c24b184c215a5d0b63247c32f01c91"
 
 "@types/prettier@1.5.0":
   version "1.5.0"
