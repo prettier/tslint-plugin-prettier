@@ -4,5 +4,6 @@
   "pinVersions": true,
   "prCreation": "not-pending",
   "rebaseStalePrs": true,
-  "semanticCommits": true
+  "semanticCommits": true,
+  "unpublishSafe": false
 }
