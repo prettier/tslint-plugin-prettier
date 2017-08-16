@@ -3,7 +3,7 @@ import * as prettier from 'prettier';
 import * as tslint from 'tslint';
 import * as ts from 'typescript';
 
-// tslint:disable:max-classes-per-file no-use-before-declare
+// tslint:disable:max-classes-per-file no-use-before-declare restrict-plus-operands
 
 export class Rule extends tslint.Rules.AbstractRule {
   public apply(source_file: ts.SourceFile): tslint.RuleFailure[] {
