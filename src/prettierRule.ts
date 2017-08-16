@@ -1,7 +1,7 @@
+import * as utils from 'eslint-plugin-prettier';
 import * as prettier from 'prettier';
 import * as tslint from 'tslint';
 import * as ts from 'typescript';
-import { report_differences } from './utils/report-differences';
 
 // tslint:disable:max-classes-per-file no-use-before-declare
 
@@ -22,8 +22,52 @@ class Walker extends tslint.AbstractWalker<prettier.Options> {
   public walk(source_file: ts.SourceFile) {
     const source = source_file.getFullText();
     const formatted = prettier.format(source, this.options);
-    if (source !== formatted) {
-      report_differences(this, formatted);
+
+    if (source === formatted) {
+      return;
     }
+
+    utils.generateDifferences(source, formatted).forEach(difference => {
+      const {
+        operation,
+        offset: start,
+        deleteText: delete_text = '',
+        insertText: insert_text = '',
+      } = difference;
+
+      const end = start + delete_text.length;
+      const delete_code = utils.showInvisibles(delete_text);
+      const insert_code = utils.showInvisibles(insert_text);
+
+      switch (operation) {
+        case utils.DifferenceOperation.Insert:
+          this.addFailureAt(
+            start,
+            1,
+            `Insert \`${insert_code}\``,
+            tslint.Replacement.appendText(start, insert_text),
+          );
+          break;
+        case utils.DifferenceOperation.Delete:
+          this.addFailure(
+            start,
+            end,
+            `Delete \`${delete_code}\``,
+            tslint.Replacement.deleteFromTo(start, end),
+          );
+          break;
+        case utils.DifferenceOperation.Replace:
+          this.addFailure(
+            start,
+            end,
+            `Replace \`${delete_code}\` with \`${insert_code}\``,
+            tslint.Replacement.replaceFromTo(start, end, insert_text),
+          );
+          break;
+        // istanbul ignore next
+        default:
+          throw new Error(`Unexpected operation '${operation}'`);
+      }
+    });
   }
 }

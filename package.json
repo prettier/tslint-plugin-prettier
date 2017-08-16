@@ -19,7 +19,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "yarn run build -- --inlineSourceMap false",
+    "prepublish": "yarn run link && yarn run build -- --inlineSourceMap false",
+    "link": "ln -sf $PWD/types/* $PWD/node_modules/@types",
     "lint": "tslint -p ./tsconfig.json --type-check",
     "test": "tslint --test ./tests/*/*",
     "test-coverage": "nyc yarn run test",
@@ -27,11 +28,10 @@
     "release": "standard-version"
   },
   "dependencies": {
-    "fast-diff": "^1.1.1",
+    "eslint-plugin-prettier": "^2.2.0",
     "tslib": "^1.7.1"
   },
   "devDependencies": {
-    "@types/fast-diff": "1.1.0",
     "@types/node": "8.0.22",
     "@types/prettier": "1.5.0",
     "nyc": "11.1.0",
