@@ -8,7 +8,7 @@
 
 tslint plugin for prettier formatting
 
-**NOTE**: This project is modified from [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier), ported to TSLint.
+**NOTE**: This project uses official reporter from [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier).
 
 [Changelog](https://github.com/ikatyang/tslint-plugin-prettier/blob/master/CHANGELOG.md)
 
