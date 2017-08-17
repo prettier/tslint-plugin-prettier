@@ -6,7 +6,7 @@
 [![dependencies](https://img.shields.io/david/ikatyang/tslint-plugin-prettier.svg)](https://david-dm.org/ikatyang/tslint-plugin-prettier)
 [![devDependencies](https://img.shields.io/david/dev/ikatyang/tslint-plugin-prettier.svg)](https://david-dm.org/ikatyang/tslint-plugin-prettier?type=dev)
 
-tslint plugin for prettier formatting
+Runs Prettier as a TSLint rule and reports differences as individual TSLint issues.
 
 **NOTE**: This project uses official reporter from [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier).
 
