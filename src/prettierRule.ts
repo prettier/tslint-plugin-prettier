@@ -40,7 +40,7 @@ class Walker extends tslint.AbstractWalker<prettier.Options> {
       const insert_code = utils.showInvisibles(insert_text);
 
       switch (operation) {
-        case utils.DifferenceOperation.Insert:
+        case 'insert':
           this.addFailureAt(
             start,
             1,
@@ -48,7 +48,7 @@ class Walker extends tslint.AbstractWalker<prettier.Options> {
             tslint.Replacement.appendText(start, insert_text),
           );
           break;
-        case utils.DifferenceOperation.Delete:
+        case 'delete':
           this.addFailure(
             start,
             end,
@@ -56,7 +56,7 @@ class Walker extends tslint.AbstractWalker<prettier.Options> {
             tslint.Replacement.deleteFromTo(start, end),
           );
           break;
-        case utils.DifferenceOperation.Replace:
+        case 'replace':
           this.addFailure(
             start,
             end,
