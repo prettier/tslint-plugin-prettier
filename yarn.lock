@@ -10,9 +10,9 @@
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-plugin-prettier/-/eslint-plugin-prettier-2.2.0.tgz#26170ee65ce05d811f3ef6fc2987acd525066c7f"
 
-"@types/node@8.0.24":
-  version "8.0.24"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.24.tgz#06c580084d9add1fb40c1510ef0b448961246fb1"
+"@types/node@8.0.25":
+  version "8.0.25"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.25.tgz#66ecaf4df93f5281b48427ee96fbcdfc4f0cdce1"
 
 "@types/prettier@1.5.0":
   version "1.5.0"
@@ -922,8 +922,8 @@ istanbul-lib-hook@^1.0.7:
     append-transform "^0.4.0"
 
 istanbul-lib-instrument@^1.7.4:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-1.7.4.tgz#e9fd920e4767f3d19edc765e2d6b3f5ccbd0eea8"
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-1.7.5.tgz#adb596f8f0cb8b95e739206351a38a586af21b1e"
   dependencies:
     babel-generator "^6.18.0"
     babel-template "^6.16.0"
@@ -1762,8 +1762,8 @@ tsutils@^1.4.0:
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-1.9.1.tgz#b9f9ab44e55af9681831d5f28d0aeeaf5c750cb0"
 
 tsutils@^2.6.1, tsutils@^2.7.1, tsutils@^2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.8.0.tgz#0160173729b3bf138628dd14a1537e00851d814a"
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.8.1.tgz#3771404e7ca9f0bedf5d919a47a4b1890a68efff"
   dependencies:
     tslib "^1.7.1"
 
