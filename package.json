@@ -35,7 +35,7 @@
     "@types/node": "8.0.25",
     "@types/prettier": "1.5.0",
     "nyc": "11.1.0",
-    "prettier": "1.5.3",
+    "prettier": "1.6.0",
     "prettier-config-ikatyang": "1.1.1",
     "standard-version": "4.2.0",
     "tslint": "5.7.0",
