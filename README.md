@@ -16,19 +16,19 @@ Runs Prettier as a TSLint rule and reports differences as individual TSLint issu
 
 ```ts
 a();;;
-//  ~~
+    ~~
 ;;;
-//~ [Delete `;;⏎;;;`]
+~~~ [Delete `;;⏎;;;`]
 ```
 
 ```ts
 var foo = ''
-//        ~~ [Replace `''` with `"";⏎`]
+          ~~ [Replace `''` with `"";⏎`]
 ```
 
 ```ts
 var foo= "";
-//     ~ [Insert `·`]
+       ~ [Insert `·`]
 ```
 
 ## Install
@@ -67,7 +67,7 @@ for `tslint@5.2.0+`
 }
 ```
 
-**NOTE**: To use this plugin, it'd better to also use [tslint-config-prettier-ext](https://github.com/ikatyang/tslint-config-prettier-ext) to disable all prettier-related rules, so as to avoid conflicts between existed rules.
+**NOTE**: To use this plugin, it'd better to also use [tslint-config-prettier](https://github.com/alexjoverm/tslint-config-prettier) to disable all prettier-related rules, so as to avoid conflicts between existed rules.
 
 ## Options
 
@@ -98,7 +98,7 @@ yarn run test
 ## Related
 
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
-- [tslint-config-prettier-ext](https://github.com/ikatyang/tslint-config-prettier-ext)
+- [tslint-config-prettier](https://github.com/alexjoverm/tslint-config-prettier)
 
 ## License
 
