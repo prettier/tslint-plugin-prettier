@@ -14,9 +14,9 @@
   version "8.0.26"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.26.tgz#4d58be925306fd22b1141085535a0268b8beb189"
 
-"@types/prettier@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.5.0.tgz#35ed47a24bd92bcab439c3670742219499a6b717"
+"@types/prettier@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.6.0.tgz#81db8cd7cd2be1d75fdbe9ec306f3f7edab4476c"
   dependencies:
     "@types/babel-types" "*"
 
@@ -1294,8 +1294,8 @@ p-locate@^2.0.0:
     p-limit "^1.1.0"
 
 parse-github-repo-url@^1.3.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/parse-github-repo-url/-/parse-github-repo-url-1.4.0.tgz#286c53e2c9962e0641649ee3ac9508fca4dd959c"
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/parse-github-repo-url/-/parse-github-repo-url-1.4.1.tgz#9e7d8bb252a6cb6ba42595060b7bf6df3dbc1f50"
 
 parse-glob@^3.0.4:
   version "3.0.4"
