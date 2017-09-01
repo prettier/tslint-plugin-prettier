@@ -5,13 +5,12 @@ import * as ts from 'typescript';
 
 // tslint:disable:naming-convention
 declare module 'prettier' {
-  interface ResolveConfigOptions {
-    sync?: boolean;
+  export namespace resolveConfig {
+    function sync(
+      filePath?: string,
+      options?: ResolveConfigOptions,
+    ): null | Options;
   }
-  export function resolveConfig(
-    filePath: string | undefined,
-    options: ResolveConfigOptions & { sync: true },
-  ): null | Options;
 }
 // tslint:enable:naming-convention
 
@@ -36,9 +35,9 @@ class Walker extends tslint.AbstractWalker<any[]> {
         options = rule_argument_1 as prettier.Options;
         break;
       default:
-        const resolved_config = prettier.resolveConfig(source_file.fileName, {
-          sync: true,
-        });
+        const resolved_config = prettier.resolveConfig.sync(
+          source_file.fileName,
+        );
         if (resolved_config !== null) {
           options = resolved_config;
         }
