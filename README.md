@@ -71,7 +71,18 @@ for `tslint@5.2.0+`
 
 ## Options
 
-Same as [Prettier Options](https://github.com/prettier/prettier#options), for example:
+If there is no option provided, it'll try to load [config file](https://github.com/prettier/prettier#configuration-file) as possible, uses Prettier's default option if not found.
+
+```json
+{
+  "extends": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": true
+  }
+}
+```
+
+If you'd like to specify options manually, just put [Prettier Options](https://github.com/prettier/prettier#options) in the second argument, for example:
 
 ```json
 {
