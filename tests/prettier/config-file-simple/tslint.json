@@ -1,6 +1,6 @@
 {
   "rulesDirectory": ["../../../rules"],
   "rules": {
-    "prettier": [true, {}]
+    "prettier": true
   }
 }

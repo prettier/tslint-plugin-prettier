@@ -3,25 +3,53 @@ import * as prettier from 'prettier';
 import * as tslint from 'tslint';
 import * as ts from 'typescript';
 
+// tslint:disable:naming-convention
+declare module 'prettier' {
+  interface ResolveConfigOptions {
+    sync?: boolean;
+  }
+  export function resolveConfig(
+    filePath: string | undefined,
+    options: ResolveConfigOptions & { sync: true },
+  ): null | Options;
+}
+// tslint:enable:naming-convention
+
 // tslint:disable:max-classes-per-file no-use-before-declare restrict-plus-operands
 
 export class Rule extends tslint.Rules.AbstractRule {
   public apply(source_file: ts.SourceFile): tslint.RuleFailure[] {
-    const [raw_options = {}] = this.ruleArguments;
-    const options: prettier.Options = {
-      parser: 'typescript',
-      ...raw_options as prettier.Options,
-    };
     return this.applyWithWalker(
-      new Walker(source_file, this.ruleName, options),
+      new Walker(source_file, this.ruleName, this.ruleArguments),
     );
   }
 }
 
-class Walker extends tslint.AbstractWalker<prettier.Options> {
+class Walker extends tslint.AbstractWalker<any[]> {
   public walk(source_file: ts.SourceFile) {
+    const [rule_argument_1] = this.options;
+
+    let options: prettier.Options = {};
+
+    switch (typeof rule_argument_1) {
+      case 'object':
+        options = rule_argument_1 as prettier.Options;
+        break;
+      default:
+        const resolved_config = prettier.resolveConfig(source_file.fileName, {
+          sync: true,
+        });
+        if (resolved_config !== null) {
+          options = resolved_config;
+        }
+        break;
+    }
+
     const source = source_file.getFullText();
-    const formatted = prettier.format(source, this.options);
+    const formatted = prettier.format(source, {
+      parser: 'typescript',
+      ...options,
+    });
 
     if (source === formatted) {
       return;
