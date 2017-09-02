@@ -1,3 +1,4 @@
+import assert = require('assert');
 import * as utils from 'eslint-plugin-prettier';
 import * as prettier from 'prettier';
 import * as tslint from 'tslint';
@@ -14,7 +15,7 @@ declare module 'prettier' {
 }
 // tslint:enable:naming-convention
 
-// tslint:disable:max-classes-per-file no-use-before-declare restrict-plus-operands
+// tslint:disable:max-classes-per-file no-use-before-declare
 
 export class Rule extends tslint.Rules.AbstractRule {
   public apply(source_file: ts.SourceFile): tslint.RuleFailure[] {
@@ -35,6 +36,15 @@ class Walker extends tslint.AbstractWalker<any[]> {
         options = rule_argument_1 as prettier.Options;
         break;
       default:
+        try {
+          // tslint:disable-next-line:strict-type-predicates
+          assert(typeof prettier.resolveConfig.sync === 'function');
+        } catch {
+          // backward compatibility: use default options if no resolveConfig.sync()
+          // istanbul ignore next
+          break;
+        }
+
         const resolved_config = prettier.resolveConfig.sync(
           source_file.fileName,
         );
