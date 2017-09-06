@@ -1193,9 +1193,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nyc@11.2.0:
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/nyc/-/nyc-11.2.0.tgz#8bfe9a3ddb7be5c5f9fa5ab6e6949c18b7d34ca1"
+nyc@11.2.1:
+  version "11.2.1"
+  resolved "https://registry.yarnpkg.com/nyc/-/nyc-11.2.1.tgz#ad850afe9dbad7f4970728b4b2e47fed1c38721c"
   dependencies:
     archy "^1.0.0"
     arrify "^1.0.1"
