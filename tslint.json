@@ -4,7 +4,7 @@
   ],
   "extends": [
     "tslint-config-ikatyang",
-    "tslint-config-prettier-ext",
+    "tslint-config-prettier",
     "prettier-config-ikatyang/tslint"
   ],
   "rules": {
