@@ -4,17 +4,6 @@ import * as prettier from 'prettier';
 import * as tslint from 'tslint';
 import * as ts from 'typescript';
 
-// tslint:disable:naming-convention
-declare module 'prettier' {
-  export namespace resolveConfig {
-    function sync(
-      filePath?: string,
-      options?: ResolveConfigOptions,
-    ): null | Options;
-  }
-}
-// tslint:enable:naming-convention
-
 // tslint:disable:max-classes-per-file no-use-before-declare
 
 export class Rule extends tslint.Rules.AbstractRule {
