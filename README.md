@@ -71,7 +71,7 @@ for `tslint@5.2.0+`
 
 ## Options
 
-If there is no option provided, it'll try to load [config file](https://github.com/prettier/prettier#configuration-file) if possible (require `prettier@1.6.x+`), uses Prettier's default option if not found.
+If there is no option provided, it'll try to load [config file](https://github.com/prettier/prettier#configuration-file) if possible (require `prettier@1.7.0+`), uses Prettier's default option if not found.
 
 ```json
 {
