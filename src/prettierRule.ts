@@ -1,3 +1,4 @@
+import assert = require('assert');
 import * as utils from 'eslint-plugin-prettier';
 import * as prettier from 'prettier';
 import * as tslint from 'tslint';
@@ -7,21 +8,46 @@ import * as ts from 'typescript';
 
 export class Rule extends tslint.Rules.AbstractRule {
   public apply(source_file: ts.SourceFile): tslint.RuleFailure[] {
-    const [raw_options = {}] = this.ruleArguments;
-    const options: prettier.Options = {
-      parser: 'typescript',
-      ...(raw_options as prettier.Options),
-    };
     return this.applyWithWalker(
-      new Walker(source_file, this.ruleName, options),
+      new Walker(source_file, this.ruleName, this.ruleArguments),
     );
   }
 }
 
-class Walker extends tslint.AbstractWalker<prettier.Options> {
+class Walker extends tslint.AbstractWalker<any[]> {
   public walk(source_file: ts.SourceFile) {
+    const [rule_argument_1] = this.options;
+
+    let options: prettier.Options = {};
+
+    switch (typeof rule_argument_1) {
+      case 'object':
+        options = rule_argument_1 as prettier.Options;
+        break;
+      default:
+        try {
+          // tslint:disable-next-line:strict-type-predicates
+          assert(typeof prettier.resolveConfig.sync === 'function');
+        } catch {
+          // backward compatibility: use default options if no resolveConfig.sync()
+          // istanbul ignore next
+          break;
+        }
+
+        const resolved_config = prettier.resolveConfig.sync(
+          source_file.fileName,
+        );
+        if (resolved_config !== null) {
+          options = resolved_config;
+        }
+        break;
+    }
+
     const source = source_file.getFullText();
-    const formatted = prettier.format(source, this.options);
+    const formatted = prettier.format(source, {
+      parser: 'typescript',
+      ...options,
+    });
 
     if (source === formatted) {
       return;

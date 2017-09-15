@@ -1,0 +1,9 @@
+{
+  "singleQuote": true,
+  "overrides": [{
+    "files": "doubleQuote.ts",
+    "options": {
+      "singleQuote": false
+    }
+  }]
+}
