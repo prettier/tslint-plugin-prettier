@@ -10,7 +10,7 @@ export class Rule extends tslint.Rules.AbstractRule {
     const [raw_options = {}] = this.ruleArguments;
     const options: prettier.Options = {
       parser: 'typescript',
-      ...raw_options as prettier.Options,
+      ...(raw_options as prettier.Options),
     };
     return this.applyWithWalker(
       new Walker(source_file, this.ruleName, options),
