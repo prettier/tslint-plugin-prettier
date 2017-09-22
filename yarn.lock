@@ -10,9 +10,9 @@
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-plugin-prettier/-/eslint-plugin-prettier-2.2.0.tgz#26170ee65ce05d811f3ef6fc2987acd525066c7f"
 
-"@types/node@8.0.29":
-  version "8.0.29"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.29.tgz#4d6b33df66b15611b40452a581c40d9c94341ba1"
+"@types/node@8.0.30":
+  version "8.0.30"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.30.tgz#aa3c42946fc6357737eb215349fe728b38679d05"
 
 "@types/prettier@1.7.0":
   version "1.7.0"
@@ -470,8 +470,8 @@ debug-log@^1.0.1:
   resolved "https://registry.yarnpkg.com/debug-log/-/debug-log-1.0.1.tgz#2307632d4c04382b8df8a32f70b895046d52745f"
 
 debug@^2.6.3, debug@^2.6.8:
-  version "2.6.8"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
+  version "2.6.9"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
     ms "2.0.0"
 
