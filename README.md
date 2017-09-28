@@ -82,6 +82,17 @@ If there is no option provided, it'll try to load [config file](https://github.c
 }
 ```
 
+If you'd like to specify where to find the config file, just put the search path (relative to `process.cwd()`) in the second argument, the following example shows how to use the config file from `<cwd>/configs/.prettierrc`:
+
+```json
+{
+  "extends": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": [true, "configs"]
+  }
+}
+```
+
 If you'd like to specify options manually, just put [Prettier Options](https://github.com/prettier/prettier#options) in the second argument, for example:
 
 ```json

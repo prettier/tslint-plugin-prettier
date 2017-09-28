@@ -1,0 +1,6 @@
+{
+  "rulesDirectory": ["../../../rules"],
+  "rules": {
+    "prettier": [true, "./fixtures/no-semi"]
+  }
+}
