@@ -1,5 +1,6 @@
 import assert = require('assert');
 import * as utils from 'eslint-plugin-prettier';
+import * as path from 'path';
 import * as prettier from 'prettier';
 import * as tslint from 'tslint';
 import * as ts from 'typescript';
@@ -24,10 +25,33 @@ class Walker extends tslint.AbstractWalker<any[]> {
       case 'object':
         options = rule_argument_1 as prettier.Options;
         break;
-      default:
+      case 'string': {
         try {
-          // tslint:disable-next-line:strict-type-predicates
-          assert(typeof prettier.resolveConfig.sync === 'function');
+          assert_existence_of_resolve_config_sync();
+        } catch {
+          // istanbul ignore next
+          throw new Error(
+            `Require prettier@1.7.0+ to specify config file, but got prettier@${prettier.version}.`,
+          );
+        }
+
+        const file_path = path.resolve(
+          process.cwd(),
+          rule_argument_1 as string,
+        );
+        const resolved_config = prettier.resolveConfig.sync(file_path);
+
+        // istanbul ignore next
+        if (resolved_config === null) {
+          throw new Error(`Config file not found: ${file_path}`);
+        }
+
+        options = resolved_config;
+        break;
+      }
+      default: {
+        try {
+          assert_existence_of_resolve_config_sync();
         } catch {
           // backward compatibility: use default options if no resolveConfig.sync()
           // istanbul ignore next
@@ -37,10 +61,13 @@ class Walker extends tslint.AbstractWalker<any[]> {
         const resolved_config = prettier.resolveConfig.sync(
           source_file.fileName,
         );
+
         if (resolved_config !== null) {
           options = resolved_config;
         }
+
         break;
+      }
     }
 
     const source = source_file.getFullText();
@@ -96,4 +123,9 @@ class Walker extends tslint.AbstractWalker<any[]> {
       }
     });
   }
+}
+
+function assert_existence_of_resolve_config_sync() {
+  // tslint:disable-next-line:strict-type-predicates
+  assert(typeof prettier.resolveConfig.sync === 'function');
 }

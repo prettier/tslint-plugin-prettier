@@ -1,0 +1,2 @@
+const x = "there should be no semi at the end of this line";
+                                                           ~ [Delete `;`]
