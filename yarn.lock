@@ -284,9 +284,9 @@ concat-stream@^1.4.10:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-conventional-changelog-angular@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/conventional-changelog-angular/-/conventional-changelog-angular-1.5.0.tgz#50b2d45008448455fdf67e06ea01972fbd08182a"
+conventional-changelog-angular@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-angular/-/conventional-changelog-angular-1.5.1.tgz#974e73aa1c39c392e4364f2952bd9a62904e9ea3"
   dependencies:
     compare-func "^1.3.1"
     q "^1.4.1"
@@ -303,9 +303,9 @@ conventional-changelog-codemirror@^0.2.0:
   dependencies:
     q "^1.4.1"
 
-conventional-changelog-core@^1.9.1:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/conventional-changelog-core/-/conventional-changelog-core-1.9.1.tgz#ddf767c405850dfc8df31726c80fa1a6a10bdc7b"
+conventional-changelog-core@^1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-core/-/conventional-changelog-core-1.9.2.tgz#a09b6b959161671ff45b93cc9efb0444e7c845c0"
   dependencies:
     conventional-changelog-writer "^2.0.1"
     conventional-commits-parser "^2.0.0"
@@ -313,7 +313,7 @@ conventional-changelog-core@^1.9.1:
     get-pkg-repo "^1.0.0"
     git-raw-commits "^1.2.0"
     git-remote-origin-url "^2.0.0"
-    git-semver-tags "^1.2.1"
+    git-semver-tags "^1.2.2"
     lodash "^4.0.0"
     normalize-package-data "^2.3.5"
     q "^1.4.1"
@@ -321,9 +321,9 @@ conventional-changelog-core@^1.9.1:
     read-pkg-up "^1.0.1"
     through2 "^2.0.0"
 
-conventional-changelog-ember@^0.2.7:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/conventional-changelog-ember/-/conventional-changelog-ember-0.2.7.tgz#c6aff35976284e7222649f81c62bd96ff3217bd2"
+conventional-changelog-ember@^0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-ember/-/conventional-changelog-ember-0.2.8.tgz#65e686da83d23b67133d1f853908c87f948035c0"
   dependencies:
     q "^1.4.1"
 
@@ -374,14 +374,14 @@ conventional-changelog-writer@^2.0.1:
     through2 "^2.0.0"
 
 conventional-changelog@^1.1.0:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/conventional-changelog/-/conventional-changelog-1.1.5.tgz#4c46fb64b2986cab19888d8c4b87ca7c0e431bfd"
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/conventional-changelog/-/conventional-changelog-1.1.6.tgz#ebd9b1ab63766c715f903f654626b6b1c0da7762"
   dependencies:
-    conventional-changelog-angular "^1.5.0"
+    conventional-changelog-angular "^1.5.1"
     conventional-changelog-atom "^0.1.1"
     conventional-changelog-codemirror "^0.2.0"
-    conventional-changelog-core "^1.9.1"
-    conventional-changelog-ember "^0.2.7"
+    conventional-changelog-core "^1.9.2"
+    conventional-changelog-ember "^0.2.8"
     conventional-changelog-eslint "^0.2.0"
     conventional-changelog-express "^0.2.0"
     conventional-changelog-jquery "^0.1.0"
@@ -408,14 +408,14 @@ conventional-commits-parser@^2.0.0:
     trim-off-newlines "^1.0.0"
 
 conventional-recommended-bump@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/conventional-recommended-bump/-/conventional-recommended-bump-1.0.1.tgz#56b8ae553a8a1152fa069e767599e1f6948bd36c"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/conventional-recommended-bump/-/conventional-recommended-bump-1.0.2.tgz#31856443ab6f9453a1827650e7cc15ec28769645"
   dependencies:
     concat-stream "^1.4.10"
     conventional-commits-filter "^1.0.0"
     conventional-commits-parser "^2.0.0"
     git-raw-commits "^1.2.0"
-    git-semver-tags "^1.2.1"
+    git-semver-tags "^1.2.2"
     meow "^3.3.0"
     object-assign "^4.0.1"
 
@@ -675,9 +675,9 @@ git-remote-origin-url@^2.0.0:
     gitconfiglocal "^1.0.0"
     pify "^2.3.0"
 
-git-semver-tags@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/git-semver-tags/-/git-semver-tags-1.2.1.tgz#6ccd2a52e735b736748dc762444fcd9588e27490"
+git-semver-tags@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/git-semver-tags/-/git-semver-tags-1.2.2.tgz#a2139be1bf6e337e125f3eb8bb8fc6f5d4d6445f"
   dependencies:
     meow "^3.3.0"
     semver "^5.0.1"
