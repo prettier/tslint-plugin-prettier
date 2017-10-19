@@ -14,9 +14,9 @@
   version "8.0.46"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.46.tgz#6e1766b2d0ed06631d5b5f87bb8e72c8dbb6888e"
 
-"@types/prettier@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.7.0.tgz#f00c8ca667658859b83ea5734cd0296a36c94630"
+"@types/prettier@1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.7.1.tgz#c88b375acca6503eb7fdcb6b7ec125f60dafc3ed"
   dependencies:
     "@types/babel-types" "*"
 
