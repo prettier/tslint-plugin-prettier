@@ -121,6 +121,7 @@ yarn run test
 
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
 - [tslint-config-prettier](https://github.com/alexjoverm/tslint-config-prettier)
+- [prettier-tslint](https://github.com/azz/prettier-tslint)
 
 ## License
 
