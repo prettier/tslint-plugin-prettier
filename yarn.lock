@@ -20,9 +20,9 @@
   dependencies:
     "@types/events" "*"
 
-"@types/prettier@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.8.0.tgz#ea17b92297d8b608d14c7d0c03078501b6388840"
+"@types/prettier@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.8.1.tgz#2e97c76a8cb55e10d649751e4a38981474aae682"
   dependencies:
     "@types/babel-types" "*"
 
