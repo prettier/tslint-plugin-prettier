@@ -31,7 +31,9 @@ class Walker extends tslint.AbstractWalker<any[]> {
         } catch {
           // istanbul ignore next
           throw new Error(
-            `Require prettier@1.7.0+ to specify config file, but got prettier@${prettier.version}.`,
+            `Require prettier@1.7.0+ to specify config file, but got prettier@${
+              prettier.version
+            }.`,
           );
         }
 
