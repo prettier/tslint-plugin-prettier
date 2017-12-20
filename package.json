@@ -34,7 +34,7 @@
     "@types/eslint-plugin-prettier": "2.2.0",
     "@types/node": "8.5.2",
     "@types/prettier": "1.9.0",
-    "nyc": "11.3.0",
+    "nyc": "11.4.1",
     "prettier": "1.9.2",
     "prettier-config-ikatyang": "1.1.1",
     "standard-version": "4.2.0",
