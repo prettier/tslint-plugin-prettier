@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/eslint-plugin-prettier": "2.2.0",
     "@types/node": "8.5.9",
-    "@types/prettier": "1.9.0",
+    "@types/prettier": "1.10.0",
     "nyc": "11.4.1",
     "prettier": "1.10.2",
     "prettier-config-ikatyang": "1.1.1",
