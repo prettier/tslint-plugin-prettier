@@ -71,7 +71,7 @@ for `tslint@5.2.0+`
 
 ## Options
 
-If there is no option provided, it'll try to load [config file](https://github.com/prettier/prettier#configuration-file) if possible (require `prettier@1.7.0+`), uses Prettier's default option if not found.
+If there is no option provided, it'll try to load [config file](https://prettier.io/docs/en/configuration.html) if possible (require `prettier@1.7.0+`), uses Prettier's default option if not found.
 
 ```json
 {
@@ -93,7 +93,7 @@ If you'd like to specify where to find the config file, just put the search path
 }
 ```
 
-If you'd like to specify options manually, just put [Prettier Options](https://github.com/prettier/prettier#options) in the second argument, for example:
+If you'd like to specify options manually, just put [Prettier Options](https://prettier.io/docs/en/options.html) in the second argument, for example:
 
 ```json
 {
