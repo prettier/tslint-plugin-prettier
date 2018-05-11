@@ -10,9 +10,9 @@
   version "8.10.14"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.14.tgz#a24767cfa22023f1bf7e751c0ead56a14c07ed45"
 
-"@types/prettier@1.12.1":
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.12.1.tgz#d8aa9c353adc3e8c1c6e51e7acb642315fd79d2d"
+"@types/prettier@1.12.2":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.12.2.tgz#4a37f0aa8ed20366ada6fa7994b1c6dfe787fdd1"
 
 JSONStream@^1.0.4:
   version "1.3.2"
