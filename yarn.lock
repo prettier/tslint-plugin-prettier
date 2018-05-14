@@ -6,9 +6,9 @@
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-plugin-prettier/-/eslint-plugin-prettier-2.2.0.tgz#26170ee65ce05d811f3ef6fc2987acd525066c7f"
 
-"@types/node@8.10.14":
-  version "8.10.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.14.tgz#a24767cfa22023f1bf7e751c0ead56a14c07ed45"
+"@types/node@8.10.15":
+  version "8.10.15"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.15.tgz#3ce3cdf6ee1846a9db0c0f52275c14bf0cd67f67"
 
 "@types/prettier@1.12.2":
   version "1.12.2"
