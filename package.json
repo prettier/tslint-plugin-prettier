@@ -37,7 +37,7 @@
     "nyc": "11.8.0",
     "prettier": "1.12.1",
     "prettier-config-ikatyang": "1.1.1",
-    "standard-version": "4.3.0",
+    "standard-version": "4.4.0",
     "tslint": "5.10.0",
     "tslint-config-ikatyang": "2.5.1",
     "tslint-config-prettier": "1.13.0",
