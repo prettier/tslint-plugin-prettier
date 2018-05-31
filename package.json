@@ -41,7 +41,7 @@
     "tslint": "5.10.0",
     "tslint-config-ikatyang": "2.5.1",
     "tslint-config-prettier": "1.13.0",
-    "typescript": "2.8.4"
+    "typescript": "2.9.1"
   },
   "peerDependencies": {
     "prettier": "^1.4.0",
