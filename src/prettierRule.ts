@@ -14,14 +14,12 @@ export class Rule extends tslint.Rules.AbstractRule {
 
 class Walker extends tslint.AbstractWalker<any[]> {
   public walk(sourceFile: ts.SourceFile) {
-    const [ruleArgument1] = this.options;
+    const [ruleArgument1, ruleArgument2 = {}] = this.options;
+    const { editorconfig = true } = ruleArgument2;
 
     let options: prettier.Options = {};
 
     switch (typeof ruleArgument1) {
-      case 'object':
-        options = ruleArgument1 as prettier.Options;
-        break;
       case 'string': {
         const configFilePath = path.resolve(
           process.cwd(),
@@ -30,7 +28,7 @@ class Walker extends tslint.AbstractWalker<any[]> {
 
         const resolvedConfig = prettier.resolveConfig.sync(
           sourceFile.fileName,
-          { config: configFilePath },
+          { config: configFilePath, editorconfig },
         );
 
         // istanbul ignore next
@@ -41,8 +39,17 @@ class Walker extends tslint.AbstractWalker<any[]> {
         options = resolvedConfig;
         break;
       }
+      case 'object':
+        if (ruleArgument1) {
+          options = ruleArgument1 as prettier.Options;
+          break;
+        }
+      // falls through for null
       default: {
-        const resolvedConfig = prettier.resolveConfig.sync(sourceFile.fileName);
+        const resolvedConfig = prettier.resolveConfig.sync(
+          sourceFile.fileName,
+          { editorconfig },
+        );
 
         if (resolvedConfig !== null) {
           options = resolvedConfig;

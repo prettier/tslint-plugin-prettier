@@ -39,7 +39,7 @@ npm install --save-dev tslint-plugin-prettier prettier
 yarn add --dev tslint-plugin-prettier prettier
 ```
 
-(require `prettier@^1.7.0`)
+(require `prettier@^1.9.0`)
 
 ## Usage
 
@@ -71,38 +71,49 @@ for `tslint@^5.2.0`
 
 ## Options
 
-If there is no option provided, it'll try to load [config file](https://prettier.io/docs/en/configuration.html) if possible, uses Prettier's default option if not found.
+- If there is no option provided, it'll try to load [config file](https://prettier.io/docs/en/configuration.html) and/or `.editorconfig` if possible, uses Prettier's default option if not found.
 
-```json
-{
-  "extends": ["tslint-plugin-prettier"],
-  "rules": {
-    "prettier": true
+  ```json
+  {
+    "extends": ["tslint-plugin-prettier"],
+    "rules": {
+      "prettier": true
+    }
   }
-}
-```
+  ```
 
-If you'd like to specify which config file to use, just put its path (relative to `process.cwd()`) in the second argument, the following example shows how to load the config file from `<cwd>/configs/.prettierrc`:
+  If you don't want to load `.editorconfig`, disable it in the third argument.
 
-```json
-{
-  "extends": ["tslint-plugin-prettier"],
-  "rules": {
-    "prettier": [true, "configs/.prettierrc"]
+  ```json
+  {
+    "extends": ["tslint-plugin-prettier"],
+    "rules": {
+      "prettier": [true, null, { "editorconfig": false }]
+    }
   }
-}
-```
+  ```
 
-If you'd like to specify options manually, just put [Prettier Options](https://prettier.io/docs/en/options.html) in the second argument, for example:
+- If you'd like to specify which config file to use, just put its path (relative to `process.cwd()`) in the second argument, the following example shows how to load the config file from `<cwd>/configs/.prettierrc`:
 
-```json
-{
-  "extends": ["tslint-plugin-prettier"],
-  "rules": {
-    "prettier": [true, { "singleQuote": true }]
+  ```json
+  {
+    "extends": ["tslint-plugin-prettier"],
+    "rules": {
+      "prettier": [true, "configs/.prettierrc"]
+    }
   }
-}
-```
+  ```
+
+- If you'd like to specify options manually, just put [Prettier Options](https://prettier.io/docs/en/options.html) in the second argument, for example:
+
+  ```json
+  {
+    "extends": ["tslint-plugin-prettier"],
+    "rules": {
+      "prettier": [true, { "singleQuote": true }]
+    }
+  }
+  ```
 
 ## Development
 
