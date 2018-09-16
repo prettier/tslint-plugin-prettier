@@ -1,13 +1,11 @@
 {
-  "rulesDirectory": [
-    "./rules"
-  ],
+  "rulesDirectory": ["tslint-plugin-prettier"],
   "extends": [
-    "tslint-config-ikatyang",
+    "tslint:recommended",
     "tslint-config-prettier",
     "prettier-config-ikatyang/tslint"
   ],
   "rules": {
-    "filename-convention": [true, { "allowPatterns": ["Rule$"] }]
+    "max-classes-per-file": false
   }
 }

@@ -11,7 +11,7 @@ before_install:
 script:
 - yarn run lint
 - yarn run build
-- yarn run test-coverage
+- yarn run test
 
 after_script:
 - codecov
