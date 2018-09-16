@@ -1,4 +1,3 @@
-import assert = require('assert');
 import * as utils from 'eslint-plugin-prettier';
 import * as path from 'path';
 import * as prettier from 'prettier';
@@ -24,17 +23,6 @@ class Walker extends tslint.AbstractWalker<any[]> {
         options = ruleArgument1 as prettier.Options;
         break;
       case 'string': {
-        try {
-          assert_existence_of_resolve_config_sync();
-        } catch {
-          // istanbul ignore next
-          throw new Error(
-            `Require prettier@1.7.0+ to specify config file, but got prettier@${
-              prettier.version
-            }.`,
-          );
-        }
-
         const filePath = path.resolve(process.cwd(), ruleArgument1 as string);
         const resolvedConfig = prettier.resolveConfig.sync(filePath);
 
@@ -47,14 +35,6 @@ class Walker extends tslint.AbstractWalker<any[]> {
         break;
       }
       default: {
-        try {
-          assert_existence_of_resolve_config_sync();
-        } catch {
-          // backward compatibility: use default options if no resolveConfig.sync()
-          // istanbul ignore next
-          break;
-        }
-
         const resolvedConfig = prettier.resolveConfig.sync(sourceFile.fileName);
 
         if (resolvedConfig !== null) {
@@ -75,51 +55,55 @@ class Walker extends tslint.AbstractWalker<any[]> {
       return;
     }
 
-    utils.generateDifferences(source, formatted).forEach(difference => {
-      const {
-        operation,
-        offset: start,
-        deleteText = '',
-        insertText = '',
-      } = difference;
-
-      const end = start + deleteText.length;
-      const deleteCode = utils.showInvisibles(deleteText);
-      const insertCode = utils.showInvisibles(insertText);
-
-      switch (operation) {
-        case 'insert':
-          this.addFailureAt(
-            start,
-            1,
-            `Insert \`${insertCode}\``,
-            tslint.Replacement.appendText(start, insertText),
-          );
-          break;
-        case 'delete':
-          this.addFailure(
-            start,
-            end,
-            `Delete \`${deleteCode}\``,
-            tslint.Replacement.deleteFromTo(start, end),
-          );
-          break;
-        case 'replace':
-          this.addFailure(
-            start,
-            end,
-            `Replace \`${deleteCode}\` with \`${insertCode}\``,
-            tslint.Replacement.replaceFromTo(start, end, insertText),
-          );
-          break;
-        // istanbul ignore next
-        default:
-          throw new Error(`Unexpected operation '${operation}'`);
-      }
-    });
+    reportDifferences(this, source, formatted);
   }
 }
 
-function assert_existence_of_resolve_config_sync() {
-  assert(typeof prettier.resolveConfig.sync === 'function');
+function reportDifferences(
+  walkContext: tslint.WalkContext<any>,
+  source: string,
+  formatted: string,
+) {
+  utils.generateDifferences(source, formatted).forEach(difference => {
+    const {
+      operation,
+      offset: start,
+      deleteText = '',
+      insertText = '',
+    } = difference;
+
+    const end = start + deleteText.length;
+    const deleteCode = utils.showInvisibles(deleteText);
+    const insertCode = utils.showInvisibles(insertText);
+
+    switch (operation) {
+      case 'insert':
+        walkContext.addFailureAt(
+          start,
+          1,
+          `Insert \`${insertCode}\``,
+          tslint.Replacement.appendText(start, insertText),
+        );
+        break;
+      case 'delete':
+        walkContext.addFailure(
+          start,
+          end,
+          `Delete \`${deleteCode}\``,
+          tslint.Replacement.deleteFromTo(start, end),
+        );
+        break;
+      case 'replace':
+        walkContext.addFailure(
+          start,
+          end,
+          `Replace \`${deleteCode}\` with \`${insertCode}\``,
+          tslint.Replacement.replaceFromTo(start, end, insertText),
+        );
+        break;
+      // istanbul ignore next
+      default:
+        throw new Error(`Unexpected operation '${operation}'`);
+    }
+  });
 }

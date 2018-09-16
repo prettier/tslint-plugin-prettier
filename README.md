@@ -8,8 +8,6 @@
 
 Runs Prettier as a TSLint rule and reports differences as individual TSLint issues.
 
-**NOTE**: This project uses official reporter from [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier).
-
 [Changelog](https://github.com/ikatyang/tslint-plugin-prettier/blob/master/CHANGELOG.md)
 
 ## Sample
@@ -41,11 +39,13 @@ npm install --save-dev tslint-plugin-prettier prettier
 yarn add --dev tslint-plugin-prettier prettier
 ```
 
+(require `prettier@^1.7.0`)
+
 ## Usage
 
 (tslint.json)
 
-for `tslint@5.0.0+`
+for `tslint@^5.0.0`
 
 ```json
 {
@@ -56,7 +56,7 @@ for `tslint@5.0.0+`
 }
 ```
 
-for `tslint@5.2.0+`
+for `tslint@^5.2.0`
 
 ```json
 {
@@ -71,7 +71,7 @@ for `tslint@5.2.0+`
 
 ## Options
 
-If there is no option provided, it'll try to load [config file](https://prettier.io/docs/en/configuration.html) if possible (require `prettier@1.7.0+`), uses Prettier's default option if not found.
+If there is no option provided, it'll try to load [config file](https://prettier.io/docs/en/configuration.html) if possible, uses Prettier's default option if not found.
 
 ```json
 {

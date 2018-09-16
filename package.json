@@ -44,7 +44,7 @@
     "typescript": "3.0.3"
   },
   "peerDependencies": {
-    "prettier": "^1.4.0",
+    "prettier": "^1.7.0",
     "tslint": "^5.0.0"
   },
   "engines": {
