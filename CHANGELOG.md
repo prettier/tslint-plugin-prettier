@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/ikatyang/tslint-plugin-prettier/compare/v1.3.0...v2.0.0) (2018-09-16)
+
+
+### Bug Fixes
+
+* specify config file correctly ([a46bb9f](https://github.com/ikatyang/tslint-plugin-prettier/commit/a46bb9f))
+
+
+### Features
+
+* support .editorconfig ([5afdfbc](https://github.com/ikatyang/tslint-plugin-prettier/commit/5afdfbc))
+
+
+### BREAKING CHANGES
+
+* require `prettier@^1.9.0`
+* load `.editorconfig` by default
+* specify config file via filepath instead of directory
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/ikatyang/tslint-plugin-prettier/compare/v1.2.0...v1.3.0) (2017-09-28)
 
