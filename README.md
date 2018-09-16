@@ -82,13 +82,13 @@ If there is no option provided, it'll try to load [config file](https://prettier
 }
 ```
 
-If you'd like to specify where to find the config file, just put the search path (relative to `process.cwd()`) in the second argument, the following example shows how to use the config file from `<cwd>/configs/.prettierrc`:
+If you'd like to specify which config file to use, just put its path (relative to `process.cwd()`) in the second argument, the following example shows how to load the config file from `<cwd>/configs/.prettierrc`:
 
 ```json
 {
   "extends": ["tslint-plugin-prettier"],
   "rules": {
-    "prettier": [true, "configs"]
+    "prettier": [true, "configs/.prettierrc"]
   }
 }
 ```

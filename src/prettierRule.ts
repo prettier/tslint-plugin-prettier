@@ -23,12 +23,19 @@ class Walker extends tslint.AbstractWalker<any[]> {
         options = ruleArgument1 as prettier.Options;
         break;
       case 'string': {
-        const filePath = path.resolve(process.cwd(), ruleArgument1 as string);
-        const resolvedConfig = prettier.resolveConfig.sync(filePath);
+        const configFilePath = path.resolve(
+          process.cwd(),
+          ruleArgument1 as string,
+        );
+
+        const resolvedConfig = prettier.resolveConfig.sync(
+          sourceFile.fileName,
+          { config: configFilePath },
+        );
 
         // istanbul ignore next
         if (resolvedConfig === null) {
-          throw new Error(`Config file not found: ${filePath}`);
+          throw new Error(`Config file not found: ${configFilePath}`);
         }
 
         options = resolvedConfig;
