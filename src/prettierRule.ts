@@ -1,4 +1,5 @@
 import * as utils from 'eslint-plugin-prettier';
+import LineAndColumn from 'lines-and-columns';
 import * as path from 'path';
 import * as prettier from 'prettier';
 import * as tslint from 'tslint';
@@ -60,17 +61,43 @@ class Walker extends tslint.AbstractWalker<any[]> {
     }
 
     const source = sourceFile.getFullText();
-    const formatted = prettier.format(source, {
-      parser: 'typescript',
-      ...options,
-    });
 
-    if (source === formatted) {
-      return;
+    try {
+      const formatted = prettier.format(source, {
+        parser: 'typescript',
+        ...options,
+      });
+
+      if (source === formatted) {
+        return;
+      }
+
+      reportDifferences(this, source, formatted);
+    } catch (e) {
+      // istanbul ignore else
+      if (e.loc) {
+        reportSyntaxError(this, source, e);
+      } else {
+        throw e;
+      }
     }
-
-    reportDifferences(this, source, formatted);
   }
+}
+
+function reportSyntaxError(
+  walkContext: tslint.WalkContext<any>,
+  source: string,
+  error: { message: string; loc: { start: { line: number; column: number } } },
+) {
+  const locator = new LineAndColumn(source);
+  const offset = locator.indexForLocation({
+    column: error.loc.start.column - 1,
+    line: error.loc.start.line - 1,
+  })!;
+  const message = error.message
+    .split('\n')[0]
+    .replace(/\s*\(\d+:\d+\)\s*$/, '');
+  walkContext.addFailureAt(offset, 1, `SyntaxError: ${message}`);
 }
 
 function reportDifferences(
