@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/ikatyang/tslint-plugin-prettier/compare/v2.0.0...v2.0.1) (2018-10-28)
+
+
+### Bug Fixes
+
+* report syntax error instead of throw ([#272](https://github.com/ikatyang/tslint-plugin-prettier/issues/272)) ([8b62595](https://github.com/ikatyang/tslint-plugin-prettier/commit/8b62595))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/ikatyang/tslint-plugin-prettier/compare/v1.3.0...v2.0.0) (2018-09-16)
 
