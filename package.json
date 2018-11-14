@@ -35,6 +35,7 @@
     "@types/eslint-plugin-prettier": "2.2.0",
     "@types/node": "4.9.1",
     "@types/prettier": "1.13.2",
+    "codecov": "3.1.0",
     "nyc": "11.9.0",
     "prettier": "1.15.2",
     "prettier-config-ikatyang": "1.1.1",
@@ -47,6 +48,9 @@
   "peerDependencies": {
     "prettier": "^1.9.0",
     "tslint": "^5.0.0"
+  },
+  "resolutions": {
+    "codecov/**/har-validator": "5.1.0"
   },
   "engines": {
     "node": ">= 4"

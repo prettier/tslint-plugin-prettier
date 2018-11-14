@@ -5,16 +5,13 @@ node_js:
 - 6
 - stable
 
-before_install:
-- yarn global add codecov
-
 script:
 - yarn run lint
 - yarn run build
 - yarn run test
 
 after_script:
-- codecov
+- yarn codecov
 
 cache:
   yarn: true
