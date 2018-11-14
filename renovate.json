@@ -1,3 +1,10 @@
 {
-  "extends": "ikatyang:library"
+  "extends": [
+    ":renovatePrefix",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":pinOnlyDevDependencies"
+  ],
+  "masterIssueApproval": true,
+  "rebaseStalePrs": true,
+  "labels": ["dependencies"]
 }
