@@ -10,8 +10,8 @@
   ],
   "main": "rules/index.js",
   "types": "rules/index.d.ts",
-  "repository": "https://github.com/ikatyang/tslint-plugin-prettier",
-  "homepage": "https://github.com/ikatyang/tslint-plugin-prettier#readme",
+  "repository": "https://github.com/prettier/tslint-plugin-prettier",
+  "homepage": "https://github.com/prettier/tslint-plugin-prettier#readme",
   "author": {
     "name": "Ika",
     "email": "ikatyang@gmail.com",

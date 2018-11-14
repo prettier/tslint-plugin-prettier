@@ -1,14 +1,12 @@
 # tslint-plugin-prettier
 
 [![npm](https://img.shields.io/npm/v/tslint-plugin-prettier.svg)](https://www.npmjs.com/package/tslint-plugin-prettier)
-[![build](https://img.shields.io/travis/ikatyang/tslint-plugin-prettier/master.svg)](https://travis-ci.org/ikatyang/tslint-plugin-prettier/builds)
-[![coverage](https://img.shields.io/codecov/c/github/ikatyang/tslint-plugin-prettier/master.svg)](https://codecov.io/gh/ikatyang/tslint-plugin-prettier)
-[![dependencies](https://img.shields.io/david/ikatyang/tslint-plugin-prettier.svg)](https://david-dm.org/ikatyang/tslint-plugin-prettier)
-[![devDependencies](https://img.shields.io/david/dev/ikatyang/tslint-plugin-prettier.svg)](https://david-dm.org/ikatyang/tslint-plugin-prettier?type=dev)
+[![build](https://img.shields.io/travis/prettier/tslint-plugin-prettier/master.svg)](https://travis-ci.org/prettier/tslint-plugin-prettier/builds)
+[![coverage](https://img.shields.io/codecov/c/github/prettier/tslint-plugin-prettier/master.svg)](https://codecov.io/gh/prettier/tslint-plugin-prettier)
 
 Runs Prettier as a TSLint rule and reports differences as individual TSLint issues.
 
-[Changelog](https://github.com/ikatyang/tslint-plugin-prettier/blob/master/CHANGELOG.md)
+[Changelog](https://github.com/prettier/tslint-plugin-prettier/blob/master/CHANGELOG.md)
 
 ## Sample
 
@@ -67,7 +65,7 @@ for `tslint@^5.2.0`
 }
 ```
 
-**NOTE**: To use this plugin, it'd better to also use [tslint-config-prettier](https://github.com/alexjoverm/tslint-config-prettier) to disable all prettier-related rules, so as to avoid conflicts between existed rules.
+**NOTE**: To use this plugin, it'd better to also use [tslint-config-prettier](https://github.com/prettier/tslint-config-prettier) to disable all prettier-related rules, so as to avoid conflicts between existed rules.
 
 ## Options
 
@@ -131,7 +129,7 @@ yarn run test
 ## Related
 
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
-- [tslint-config-prettier](https://github.com/alexjoverm/tslint-config-prettier)
+- [tslint-config-prettier](https://github.com/prettier/tslint-config-prettier)
 - [prettier-tslint](https://github.com/azz/prettier-tslint)
 
 ## License
