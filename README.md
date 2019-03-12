@@ -43,22 +43,23 @@ yarn add --dev tslint-plugin-prettier prettier
 
 (tslint.json)
 
-for `tslint@^5.0.0`
-
-```json
-{
-  "extends": ["tslint-plugin-prettier"],
-  "rules": {
-    "prettier": true
-  }
-}
-```
 
 for `tslint@^5.2.0`
 
 ```json
 {
   "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": true
+  }
+}
+```
+
+for `tslint@^5.0.0`
+
+```json
+{
+  "extends": ["tslint-plugin-prettier"],
   "rules": {
     "prettier": true
   }
