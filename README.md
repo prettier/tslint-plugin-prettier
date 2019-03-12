@@ -43,7 +43,6 @@ yarn add --dev tslint-plugin-prettier prettier
 
 (tslint.json)
 
-
 for `tslint@^5.2.0`
 
 ```json
