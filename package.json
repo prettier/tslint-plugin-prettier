@@ -41,7 +41,7 @@
     "prettier-config-ikatyang": "1.1.1",
     "standard-version": "4.4.0",
     "tslint": "5.11.0",
-    "tslint-config-prettier": "1.16.0",
+    "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.0.1",
     "typescript": "3.1.6"
   },
