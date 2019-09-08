@@ -65,7 +65,19 @@ for `tslint@^5.0.0`
 }
 ```
 
-**NOTE**: To use this plugin, it'd better to also use [tslint-config-prettier](https://github.com/prettier/tslint-config-prettier) to disable all prettier-related rules, so as to avoid conflicts between existed rules.
+## When to use `tslint-plugin-prettier`
+
+#### use this package when...
+
+- you want to run prettier as a plugin of tslint and you only want prettier to report issues in `.ts` or `.tsx` files
+- Ex npm script: `"lint": "tslint -p tsconfig.json"`
+
+#### don't use this package when...
+
+- you want prettier to check other file types such as `.md` or `.json`.  In this case you'll need to run prettier manually as an additional step along with tslint.
+- Ex npm script: `"lint": "tslint -p tsconfig.json && prettier --check \"src/**/*.{ts,tsx,js,md,json}\""`
+
+**NOTE**: in both scenarios, it's a good idea to also use [tslint-config-prettier](https://github.com/prettier/tslint-config-prettier) to disable all prettier-related rules, so as to avoid conflicts between existed rules.
 
 ## Options
 
