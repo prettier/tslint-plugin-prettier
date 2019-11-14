@@ -1,7 +1,6 @@
 language: node_js
 
 node_js:
-- 4
 - 6
 - stable
 
@@ -9,6 +8,9 @@ script:
 - yarn run lint
 - yarn run build
 - yarn run test
+# yarn does not work on node 4
+- if [ "$TRAVIS_NODE_VERSION" = "6" ]; then nvm install 4; fi
+- if [ "$TRAVIS_NODE_VERSION" = "6" ]; then npm run test; fi
 
 after_script:
 - yarn codecov
