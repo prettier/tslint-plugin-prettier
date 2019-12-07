@@ -7,9 +7,20 @@ import * as ts from 'typescript';
 
 export class Rule extends tslint.Rules.AbstractRule {
   public apply(sourceFile: ts.SourceFile): tslint.RuleFailure[] {
+    if (this.sourceFileIsIgnored(sourceFile, this.ruleArguments)) {
+      return [];
+    }
     return this.applyWithWalker(
       new Walker(sourceFile, this.ruleName, this.ruleArguments),
     );
+  }
+  private sourceFileIsIgnored(sf: ts.SourceFile, ruleArguments: any[]) {
+    let ignorePath = '.prettierignore';
+    if (ruleArguments.length === 3) {
+      ignorePath = ruleArguments[2];
+    }
+    const r = prettier.getFileInfo.sync(sf!.fileName, { ignorePath });
+    return r.ignored;
   }
 }
 

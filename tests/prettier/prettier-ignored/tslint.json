@@ -1,0 +1,6 @@
+{
+  "rulesDirectory": ["../../../rules"],
+  "rules": {
+    "prettier": [true, null, null, "tests/prettier/prettier-ignored/.prettierignore"]
+  }
+}
