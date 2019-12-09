@@ -14,13 +14,19 @@ export class Rule extends tslint.Rules.AbstractRule {
       new Walker(sourceFile, this.ruleName, this.ruleArguments),
     );
   }
-  private sourceFileIsIgnored(sf: ts.SourceFile, ruleArguments: any[]) {
+  private getIgnorePath(ruleArguments: any[]) {
     let ignorePath = '.prettierignore';
-    if (ruleArguments.length === 3) {
-      ignorePath = ruleArguments[2];
+    if (ruleArguments.length === 2 && ruleArguments[1].ignorePath) {
+      ignorePath = ruleArguments[1].ignorePath;
     }
-    const r = prettier.getFileInfo.sync(sf!.fileName, { ignorePath });
-    return r.ignored;
+    return ignorePath;
+  }
+  private sourceFileIsIgnored(sourceFile: ts.SourceFile, ruleArguments: any[]) {
+    const ignorePath = this.getIgnorePath(ruleArguments);
+    const fileInfo = prettier.getFileInfo.sync(sourceFile!.fileName, {
+      ignorePath,
+    });
+    return fileInfo.ignored;
   }
 }
 
