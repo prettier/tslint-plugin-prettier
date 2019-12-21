@@ -113,6 +113,20 @@ for `tslint@^5.0.0`
   }
   ```
 
+## Ignoring files
+
+- It will respect your .prettierignore file in your project root ( process.cwd() ) but if you would like to use a different file you can provide it in the third argument, for example:
+
+  ```json
+  {
+    "extends": ["tslint-plugin-prettier"],
+    "rules": {
+      "prettier": [true, null, { "ignorePath": "otherDirectory/.prettierignore" }]
+    }
+  }
+
+  ```
+
 ## Development
 
 ```sh
