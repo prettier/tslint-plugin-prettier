@@ -1,6 +1,6 @@
 {
   "name": "tslint-plugin-prettier",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Runs Prettier as a TSLint rule and reports differences as individual TSLint issues.",
   "keywords": [
     "prettier",
