@@ -36,7 +36,7 @@
     "@types/node": "4.9.3",
     "@types/prettier": "1.13.2",
     "codecov": "3.1.0",
-    "nyc": "11.9.0",
+    "nyc": "14.1.1",
     "prettier": "1.15.2",
     "prettier-config-ikatyang": "1.1.1",
     "standard-version": "4.4.0",
