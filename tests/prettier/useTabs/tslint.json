@@ -1,6 +1,6 @@
 {
   "rulesDirectory": ["../../../rules"],
   "rules": {
-    "prettier": [true, { "useTabs": true }]
+    "prettier": [true, { "useTabs": true, "trailingComma": "none" }]
   }
 }

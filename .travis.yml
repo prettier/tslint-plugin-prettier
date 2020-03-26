@@ -4,6 +4,12 @@ node_js:
 - 6
 - stable
 
+before_install:
+- >
+  if [ "$TRAVIS_NODE_VERSION" = "6" ]; then
+    yarn upgrade prettier@1.19.1
+  fi
+
 script:
 - yarn run lint
 - yarn run build

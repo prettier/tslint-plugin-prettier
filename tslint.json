@@ -1,12 +1,12 @@
 {
   "rulesDirectory": ["tslint-plugin-prettier"],
-  "extends": [
-    "tslint:recommended",
-    "tslint-config-prettier",
-    "prettier-config-ikatyang/tslint"
-  ],
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
   "rules": {
     "max-classes-per-file": false,
-    "no-switch-case-fall-through": true
+    "no-switch-case-fall-through": true,
+    "prettier": [
+      true,
+      { "arrowParens": "avoid", "singleQuote": true, "trailingComma": "all" }
+    ]
   }
 }
