@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@types/eslint-plugin-prettier": "2.2.0",
-    "@types/node": "4.9.3",
+    "@types/node": "13.9.8",
     "@types/prettier": "1.19.1",
     "codecov": "3.6.5",
     "nyc": "11.9.0",
