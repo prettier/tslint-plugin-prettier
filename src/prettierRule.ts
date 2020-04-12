@@ -1,4 +1,4 @@
-import * as utils from 'eslint-plugin-prettier';
+import * as utils from 'prettier-linter-helpers';
 import LineAndColumn from 'lines-and-columns';
 import * as path from 'path';
 import * as prettier from 'prettier';

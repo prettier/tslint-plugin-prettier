@@ -15,16 +15,6 @@ script:
 - yarn run build
 - yarn run test
 
-- > # yarn and tslint-test do not work on node 4
-    if [ "$TRAVIS_NODE_VERSION" = "6" ]; then
-      echo '{ "presets": [["@babel/preset-env", { "targets": { "node": "4" } }]] }' > .babelrc.test.json
-      npm install @babel/cli @babel/core @babel/preset-env
-      node_modules/.bin/babel node_modules/@babel/code-frame/lib --out-dir node_modules/@babel/code-frame/lib --config-file ./.babelrc.test.json
-      node_modules/.bin/babel node_modules/@babel/highlight/lib --out-dir node_modules/@babel/highlight/lib --config-file ./.babelrc.test.json
-      nvm install 4
-      npm run test
-    fi
-
 after_script:
 - node_modules/.bin/codecov
 
