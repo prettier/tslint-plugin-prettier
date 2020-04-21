@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# [3.0.0-beta.0](https://github.com/prettier/tslint-plugin-prettier/compare/v2.3.0...v3.0.0-beta.0) (2020-04-21)
+
+
+### Chores
+
+* replace `eslint-plugin-prettier` with `prettier-linter-helpers` ([#372](https://github.com/prettier/tslint-plugin-prettier/issues/372)) ([f0887ef](https://github.com/prettier/tslint-plugin-prettier/commit/f0887ef))
+
+
+### BREAKING CHANGES
+
+* require Node v6
+
+
+
 <a name="2.3.0"></a>
 # [2.3.0](https://github.com/prettier/tslint-plugin-prettier/compare/v2.2.0...v2.3.0) (2020-03-26)
 
