@@ -38,7 +38,7 @@
     "codecov": "3.6.5",
     "nyc": "11.9.0",
     "prettier": "2.0.5",
-    "standard-version": "4.4.0",
+    "standard-version": "8.0.0",
     "tslint": "6.1.2",
     "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.0.1",
