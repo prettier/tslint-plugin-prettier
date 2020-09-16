@@ -29,7 +29,7 @@
   "dependencies": {
     "eslint-plugin-prettier": "^2.2.0",
     "lines-and-columns": "^1.1.6",
-    "tslib": "^1.7.1"
+    "tslib": "^2.0.1"
   },
   "devDependencies": {
     "@types/eslint-plugin-prettier": "2.2.0",
