@@ -30,10 +30,10 @@
   version "4.9.3"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-4.9.3.tgz#a24697a8157ab517996afe0c88fa716550ae419a"
 
-"@types/prettier@2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.2.tgz#4929992f87a0129f4960a110faeb526210562e7b"
-  integrity sha512-IiPhNnenzkqdSdQH3ifk9LoX7oQe61ZlDdDO4+MUv6FyWdPGDPr26gCPVs3oguZEMq//nFZZpwUZcVuNJsG+DQ==
+"@types/prettier@2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.3.tgz#9cf7acfdf6bab208e0f690b37e09a0493c61bbb5"
+  integrity sha512-KEHKOUP2oQyUVx8AUj42wDpHiRYMg+vinD+RNHnEvEgfSepPjuY87/g7ujt9fTYRSuueMmMkKWBplclx/H732w==
 
 JSONStream@^1.0.4:
   version "1.3.5"
