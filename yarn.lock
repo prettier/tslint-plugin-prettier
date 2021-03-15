@@ -26,9 +26,10 @@
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-plugin-prettier/-/eslint-plugin-prettier-2.2.0.tgz#26170ee65ce05d811f3ef6fc2987acd525066c7f"
 
-"@types/node@4.9.3":
-  version "4.9.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-4.9.3.tgz#a24697a8157ab517996afe0c88fa716550ae419a"
+"@types/node@14.14.34":
+  version "14.14.34"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.34.tgz#07935194fc049069a1c56c0c274265abeddf88da"
+  integrity sha512-dBPaxocOK6UVyvhbnpFIj2W+S+1cBTkHQbFQfeeJhoKFbzYcVUGHvddeWPSucKATb3F0+pgDq0i6ghEaZjsugA==
 
 "@types/prettier@2.2.2":
   version "2.2.2"
