@@ -1,5 +1,5 @@
 import * as utils from 'eslint-plugin-prettier';
-import LineAndColumn from 'lines-and-columns';
+import { LinesAndColumns } from 'lines-and-columns';
 import * as path from 'path';
 import * as prettier from 'prettier';
 import * as tslint from 'tslint';
@@ -106,7 +106,7 @@ function reportSyntaxError(
   source: string,
   error: { message: string; loc: { start: { line: number; column: number } } },
 ) {
-  const locator = new LineAndColumn(source);
+  const locator = new LinesAndColumns(source);
   const offset = locator.indexForLocation({
     column: error.loc.start.column - 1,
     line: error.loc.start.line - 1,
